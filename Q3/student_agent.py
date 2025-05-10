@@ -18,3 +18,4 @@ class Agent(object):
 
     def act(self, observation):
         return self.agent.select_action(observation)
+    
