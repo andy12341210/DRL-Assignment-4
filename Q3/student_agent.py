@@ -13,7 +13,7 @@ class Agent(object):
         state_dim = env.observation_space.shape[0]
         action_dim = env.action_space.shape[0]
         self.agent = SACAgent(state_dim,action_dim)
-        checkpoint = torch.load("modelQ3_2.pth", weights_only=True)
+        checkpoint = torch.load("final.pth", weights_only=True)
         self.agent.actor.load_state_dict(checkpoint['actor'])
 
     def act(self, observation):
